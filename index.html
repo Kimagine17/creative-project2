@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Lab 2</title>
+  <title>CP 2</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="/styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +11,8 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #ff7f94;">
-    <a class="navbar-brand" href="#">Weather Checker</a>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1b500c;">
+    <a class="navbar-brand" href="#">kIMAGINE&DRAGONS</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -30,6 +30,9 @@
         <li class="nav-item">
           <a class="nav-link" href="http://lab1.kimagineland.com/">Photography Site</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://lab2.kimagineland.com/">Weather Checker</a>
+        </li>
       </ul>
       <span class="navbar-text">
         Questions? Email kimberlite17@gmail.com
@@ -39,28 +42,45 @@
 
   <div class="main-container">
     <div class="page">
-      <h1>Weather Checker</h1>
+      <h1>kIMAGINE&DRAGONS</h1>
       <hr>
-      <h2>Today's Weather</h2>
+      <h2>Choose a class:</h2>
       <div class = "main">
+        <div class = "class-images">
+          <div class = "class-set">
+              <img src = "/imgs/barbarian.png">
+              <p>"BARBARIAN"</p>
+          </div>
+          <div class = "class-set">
+              <img src = "/imgs/bard.png">
+              <p>"BARD"</p>
+          </div>
+          <div class = "class-set">
+              <img src = "/imgs/cleric.png">
+              <p>"CLERIC"</p>
+            </div>
+          <div class = "class-set">
+              <img src = "/imgs/druid.png">
+              <p>"DRUID"</p>
+          </div>
+        </div>
         <div class = "enter">
           <form>
-            <label>Enter a U.S. city, state: </label>
-            <input id="weatherInput" type="text"></input><br/>
-            <input id="weatherSubmit" type="submit" value="Submit"></input>
+            <label>Enter a class/level [1-20]: (ex: bard/2)</label>
+            <input id="levelInput" type="text"></input><br/>
+            <input id="levelSubmit" type="submit" value="Submit"></input>
           </form>
         </div>
-        <div id="weatherResults">
-          <h2>Check Weather Here!</h2>
-          <!-- Weather rn dump -->
+        <div id="classResults">
+          <!-- class rn dump -->
         </div>
       </div>
 
       <hr>
-      <h2>Forecasted Weather</h2>
-      <div class = "forecastBox">
-        <div id="forecastResults">
-          <!-- Weather Forecast dump here -->
+      <button onclick="spellCheck()">Check for class spells!</button>
+      <div class = "spellResults">
+        <div id="spellResultOutput">
+          <!-- Spell Forecast dump here -->
         </div>
       </div>
     </div>
@@ -75,7 +95,7 @@
             <p> Email: kimberlite17@gmail.com </p>
         </div>
         <div class = "link">
-            <p><a href = "https://github.com/BYU-CS-260-Winter-2021/lab-2-weather-app-Kimagine17">Link to GitHub</a></p>
+            <p><a href = "https://github.com/Kimagine17/creative-project2">Link to GitHub</a></p>
         </div>
       </div>
     </div>
