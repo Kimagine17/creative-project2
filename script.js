@@ -32,25 +32,31 @@ document.getElementById("levelSubmit").addEventListener("click", function(event)
     }).then(function(json) {
           console.log(json);
             let results = "";
-            results += "<h2>You chose " + json.class.name + ", Level " + json.level + "</h2>";
-            results += "<h3>Proficiency Bonus: " +json.prof_bonus + "</h3>";
-            results += "<h3>Features:</h3>";
-            for(let i=0; i < json.features.length; i++)
+            results += "<h3>You chose " + json.class.name + ", Level " + json.level + "</h3><hr>";
+            results += "<h4>Proficiency Bonus: " +json.prof_bonus + "</h4>";
+            results += "<h4>Features:</h4>";
+            if(json.features.length===0)
             {
-              const featureUrl2 = "https://www.dnd5eapi.co" + json.features[i].url;
-              fetch(featureUrl2)
-                .then(function(response2) {
-                  return response2.json();
-                }).then (function(json2) {
-                  results += "<h3>" + json2.name + "</h3>"
-                  for(let k = 0; k < json2.desc.length; k++)
-                  {
-                    results += "<p>" + json2.desc[k] + "</p>";
-                  }
-                  console.log(results);
-                  document.getElementById("classResults").innerHTML = results;
-                });
-              results += "</div";
+              results += "<p>" + json.class.name + " level " + json.level + " has no features!</p>"
+            }
+            else {
+              for(let i=0; i < json.features.length; i++)
+              {
+                const featureUrl2 = "https://www.dnd5eapi.co" + json.features[i].url;
+                fetch(featureUrl2)
+                  .then(function(response2) {
+                    return response2.json();
+                  }).then (function(json2) {
+                    results += "<h5>" + json2.name + "</h5>"
+                    for(let k = 0; k < json2.desc.length; k++)
+                    {
+                      results += "<p>" + json2.desc[k] + "</p>";
+                    }
+                    console.log(results);
+                    document.getElementById("classResults").innerHTML = results;
+                  });
+                results += "</div>";
+                }
               }
             document.getElementById("classResults").innerHTML = results;
       });
@@ -69,13 +75,13 @@ function spellCheck()
       return response.json();
     }).then(function(json) {
       let results = "";
-      results += "<h2>Number of spells avaible: " + json.count + "</h2>";
+      results += "<h3>Number of spells avaible: " + json.count + "</h3><hr>";
       if(json.count === 0)
       {
-        results += "<p>You have no spells availble!</p>";
+        results += "<p>You have no spells available!</p>";
       }
       else {
-      results += "<p>List of Spells: <ul>"
+      results += "<h4>List of Spells: </h4><ul>"
         for(let i=0; i < json.results.length; i++) {
           // console.log(json.results[i]);
           results += "<li>" + json.results[i].name + "</li>";

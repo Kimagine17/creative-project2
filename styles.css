@@ -82,6 +82,16 @@ input[type=text], #levelSubmit, button  {
     padding: 2%;
     margin: 2%;
 }
+#classResults h4 {
+    margin: 1%;
+    margin-left: 0px;
+}
+#classResults h5 {
+    text-decoration: underline;
+}
+#spellResultOutput ul{
+    margin-left: 50px;
+}
 .footer {
     position: absolute;
     bottom: 0;
@@ -103,22 +113,35 @@ input[type=text], #levelSubmit, button  {
 .footer-items {
     width: 90%;
 }
+.class-images {
+    margin: auto;
+    justify-content: center;
+}
 @media screen and (max-width: 700px) {
 
 }
 
 /* Mobile Styles */
-@media only screen and (max-width: 400px) {
-
+@media only screen and (max-width: 400) {
+    .class-set {
+        width: 20%;
+    }
+    .class-images {
+        margin: auto;
+        justify-content: center;
+    }
 }
   
 /* Tablet Styles */
-@media only screen and (min-width: 401px) and (max-width: 799px) {
-    
+@media only screen and (min-width: 401) and (max-width: 850px) {
+    .class-set {
+        width: 100%;
+    }
+
 }
   
 /* Desktop Styles */
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 851px) {
     .class-set {
         width: 14%;
     }
