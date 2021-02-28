@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #1b500c;
+    font-family: "American Typewriter", serif;
+    line-height: 2em;
+}
+h1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    text-align: center;
+    background-color: #4f7a43;
+    color: #f3f3f3;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.main-container {
+    min-height: 100vh; /* will cover the 100% of viewport */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 200px; /* height of your footer */
+    width: 100%;
+    background-color: #f3f3f3;
+}
+body {
+    height: 100%;
+}
+.main {
+    padding: 3%;
+    width: 100%;
+}
+img {
+    width: 100%;
+}
+input[type=text], #levelSubmit, button  {
+    border: solid 3px #1b500c;
+    border-radius: 3px;
+    background-color: #e3e3e3;
+    padding: 2px;
+    /* color: #1f5543; */
+}
+/* #levelSubmit, button {
+    border: 3px solid #1b500c;
+    background-color: #efefef; */
+
+/* } */
+.class-images {
+    margin: 10px auto 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: #e3e3e3; */
+
+}
+
+.class-set {
+    width: 40%;
+    border: 2px solid #1b500c;
+    margin: 1%;
+    background-color: #e3e3e3;
+}
+
+.class-set p {
+    text-align: center;
+    padding-top: 0px;
+}
+
+#classResults {
+    border: 2px solid #1b500c;
+    background-color: #e3e3e3;
+    padding: 2%;
+    margin: 2%;
+}
+
+#classResults, #spellResultOutput {
+    border: 2px solid #1b500c;
+    background-color: #e3e3e3;
+    padding: 2%;
+    margin: 2%;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    left: 0;
+    background-color: #1b500c;
+    color: #ffffff;
+    text-align: center;
+    justify-content: center; 
+}
+.footer p {
+    color: #ffffff;
+}
+
+.footer-items {
+    width: 90%;
+}
+@media screen and (max-width: 700px) {
+
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+
+}
+  
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 799px) {
+    
+}
+  
+/* Desktop Styles */
+@media only screen and (min-width: 800px) {
+    .class-set {
+        width: 14%;
+    }
+}
+
+
+  

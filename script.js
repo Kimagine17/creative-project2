@@ -34,7 +34,7 @@ document.getElementById("levelSubmit").addEventListener("click", function(event)
             let results = "";
             results += "<h2>You chose " + json.class.name + ", Level " + json.level + "</h2>";
             results += "<h3>Proficiency Bonus: " +json.prof_bonus + "</h3>";
-            results += "<h3>Features:<h3>";
+            results += "<h3>Features:</h3>";
             for(let i=0; i < json.features.length; i++)
             {
               const featureUrl2 = "https://www.dnd5eapi.co" + json.features[i].url;
@@ -42,20 +42,16 @@ document.getElementById("levelSubmit").addEventListener("click", function(event)
                 .then(function(response2) {
                   return response2.json();
                 }).then (function(json2) {
-                  results += "<div class=feature>";
-                  results += "<h3>" + json2.name + "<h3>"
+                  results += "<h3>" + json2.name + "</h3>"
                   for(let k = 0; k < json2.desc.length; k++)
                   {
                     results += "<p>" + json2.desc[k] + "</p>";
                   }
                   console.log(results);
-                  results += "</div>";
                   document.getElementById("classResults").innerHTML = results;
                 });
-              // results += "<p>" + getFeatures(json.features[i].url) + "</p";
               results += "</div";
               }
-            //results += json.features;
             document.getElementById("classResults").innerHTML = results;
       });
 });
